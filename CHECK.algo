@@ -1,0 +1,39 @@
+ALGORITHM CHECK ALGO
+VAR
+    sentence: STRING
+    length: INTEGER
+    word_count: INTEGER
+    vowel_count: INTEGER
+    char: CHARACTER
+BEGIN
+
+    length := 0
+    word_count := 0
+    vowel_count := 0
+    
+    
+    READ sentence
+    
+    FOR EACH char IN sentence DO
+
+        length := length + 1
+        
+
+        IF char IS IN {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'} THEN
+            vowel_count := vowel_count + 1
+        END IF
+        
+        
+        IF char = ' ' THEN
+            word_count := word_count + 1
+        END IF
+    END FOR
+    
+
+    word_count := word_count + 1
+    
+    
+    OUTPUT "Length of the sentence:", length
+    OUTPUT "Number of words in the sentence:", word_count
+    OUTPUT "Number of vowels in the sentence:", vowel_count
+END
